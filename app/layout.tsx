@@ -1,18 +1,20 @@
-import './globals.css'
+import Navbar from "@/components/layout/Navbar";
+import "./globals.css";
 
 export const metadata = {
-  title: 'Evently',
-  description: 'Discover and find tech events!',
-}
+  title: "Evently",
+  description: "Discover and find tech events!",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
+      <Navbar />
       <body>{children}</body>
     </html>
-  )
+  );
 }
