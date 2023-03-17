@@ -1,3 +1,4 @@
+import { GitHubIcon } from "@/lib/icons";
 import { LOGO, LOGO_ALT } from "@/lib/utils";
 import Image from "next/image";
 
@@ -8,8 +9,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Image src={LOGO} alt={LOGO_ALT} height={150} width={150} />
           <div className="flex space-x-4 text-gray-900">
-            <button className="bg-white text-black px-6 py-1 border rounded-lg">
-              Star on Github
+            <button className="bg-white text-black px-6 py-1 border rounded-lg flex space-x-2">
+              <GitHubIcon /> <span>Star on Github</span>
             </button>
           </div>
         </div>
