@@ -1,3 +1,15 @@
 export default function Home() {
-  return <h1 className="text-3xl font-bold underline"></h1>;
+  return (
+    <main>
+      <section className="flex flex-col items-center text-white">
+        <h1 className="text-4xl  font-bold underline">
+          Dont miss any tech event, hackathon, conference
+        </h1>
+        <p>
+          Find and Discover tech events, hackathons, and conferences happening
+          around Uganda
+        </p>
+      </section>
+    </main>
+  );
 }
