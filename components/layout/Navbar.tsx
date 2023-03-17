@@ -1,5 +1,3 @@
-"use client";
-
 import { LOGO, LOGO_ALT } from "@/lib/utils";
 import Image from "next/image";
 
@@ -15,7 +13,7 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-      </div>  
+      </div>
     </nav>
   );
 }
