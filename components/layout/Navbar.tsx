@@ -1,9 +1,13 @@
+import { LOGO, LOGO_ALT } from "@/lib/utils";
+import Image from "next/image";
+
 export default function Navbar() {
   return (
     <nav className="sticky top-0 z-10 bg-black backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex">
+            <Image src={LOGO} alt={LOGO_ALT} height={50} width={50}/>
             <span className="text-2xl text-gray-900 font-semibold">
               evently
             </span>
