@@ -1,7 +1,9 @@
+"use client"
+
 import { GitHubIcon } from "@/lib/icons";
 import { GITHUB_LINK, LOGO, LOGO_ALT } from "@/lib/utils";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const router = useRouter();
