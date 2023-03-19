@@ -10,9 +10,6 @@ export default function Home() {
           around Uganda
         </p>
       </section>
-      <section>
-        
-      </section>
     </main>
   );
 }
