@@ -12,9 +12,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <Navbar />
-      <body>{children}</body>
+    <html lang="en" className={"bg-[#111010]"}>
+      <body>
+        <Navbar />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
