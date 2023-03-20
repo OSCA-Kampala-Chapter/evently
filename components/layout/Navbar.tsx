@@ -1,12 +1,12 @@
-"use client"
+'use client'
 
-import { GitHubIcon } from "@/lib/icons";
-import { GITHUB_LINK, LOGO, LOGO_ALT } from "@/lib/utils";
-import Image from "next/image";
-import { useRouter } from 'next/navigation';
+import { GitHubIcon } from '@/lib/icons'
+import { GITHUB_LINK, LOGO, LOGO_ALT } from '@/lib/utils'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 export default function Navbar() {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <nav className="sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200">
       <div className="max-w-5xl mx-auto px-4">
@@ -23,5 +23,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  );
+  )
 }
