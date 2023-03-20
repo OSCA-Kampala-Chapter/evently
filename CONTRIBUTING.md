@@ -12,20 +12,19 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 > - Kindly Mention this project at local meetups and tell your friends/colleagues such that the open community grows
 
 ## Table of Contents
-
-- [I Have a Question](#i-have-a-question)
-- [I Want To Contribute](#i-want-to-contribute)
-  - [Can I implement feature ideas?](#can-i-implement-feature-x?)
-  - [Reporting Bugs](#reporting-bugs)
-    - [Before Submitting a Bug Report](#before-submitting-a-bug-report)
-    - [How Do I Submit a Good Bug Report?](#how-do-i-submit-a-good-bug-report)
-  - [Suggesting Enhancements](#suggesting-enhancements)
-    - [Before Submitting an Enhancement](#before-submitting-an-enhancement)
-    - [How Do I Submit a Good Enhancement Suggestion?](#how-do-i-submit-a-good-enhancement-suggestion)
-  - [Your First Code Contribution](#your-first-code-contribution)
-    - [Run Locally](#run-locally)
-  - [Wiriting your a component](#wiriting-your-a-component)
-- [Project License](#project-license)
+  - [I Have a Question](#i-have-a-question)
+  - [I Want To Contribute](#i-want-to-contribute)
+    - [Can I implement feature ideas?](#can-i-implement-feature-x?)
+    - [Reporting Bugs](#reporting-bugs)
+      - [Before Submitting a Bug Report](#before-submitting-a-bug-report)
+      - [How Do I Submit a Good Bug Report?](#how-do-i-submit-a-good-bug-report)
+    - [Suggesting Enhancements](#suggesting-enhancements)
+      - [Before Submitting an Enhancement](#before-submitting-an-enhancement)
+      - [How Do I Submit a Good Enhancement Suggestion?](#how-do-i-submit-a-good-enhancement-suggestion)
+    - [Your First Code Contribution](#your-first-code-contribution)
+      - [Run Locally](#run-locally)
+    - [Wiriting your a component](#wiriting-your-a-component)
+  - [Project License](#project-license)
 
 ## I Have a Question
 
@@ -48,7 +47,6 @@ We will then take care of the issue as soon as possible.
 > When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license.
 
 ### Can I implement feature ideas?
-
 1. Before writing the code for your feature, please [create an issue here](https://github.com/OSCA-Kampala-Chapter/enently/issues/new/choose).
 2. Sometimes, the feature you have in mind might already exist! or might not fit well in the tool.
 3. It breaks my heart to say no to a pull request. So, please let's talk about it first on an issue!
@@ -133,9 +131,7 @@ or
 
 npm install
 ```
-
 Run the development server:
-
 ```js
 pnpm dev
 
