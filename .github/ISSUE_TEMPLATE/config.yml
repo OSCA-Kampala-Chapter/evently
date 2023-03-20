@@ -1,4 +1,4 @@
 blank_issues_enabled: false
-contact_links:
+contact_link:
   - name:Please report security vulnerabilities here.
     url: https://github.com/OSCA-Kampala-Chapter/evently/
