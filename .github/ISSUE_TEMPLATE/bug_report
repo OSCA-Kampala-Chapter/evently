@@ -1,0 +1,37 @@
+---
+name: Bug report
+about: Create a report to help us improve
+title: ''
+labels: ''
+assignees: ''
+
+---
+
+**What were you trying to achieve?**
+Please, write down a clear and concise description of what the bug is.
+
+
+**What are the expected results?**
+Please, write down a clear and concise description of what you expected to happen.
+
+
+**What are the received results?**
+Please, if applicable add screenshots to help explain your problem.
+
+
+**What are the steps to reproduce the issue?**
+Kindly describe the steps that the mainterns of this repository can follow to reproduce the issue!
+
+
+**In what environment did you encounter the issue?**
+ - OS:
+ - [ ] Windows!
+ - [ ] Linu!
+ - [ ] Marc!
+
+ - Version
+ - [ ] 64Bit!
+ - [ ] 32Bit!
+
+**Additional context**
+Hi!, is there any-other information you would like to share with the maintainers?
