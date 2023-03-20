@@ -8,7 +8,7 @@
 
 ### Contributing
 
-Please check out our [Contributing Guide]()
+Please check out our [Contributing Guide](/CONTRIBUTING.md)
 
 ### Getting Started
 
