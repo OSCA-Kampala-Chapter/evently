@@ -11,5 +11,5 @@ export default function Home() {
         </p>
       </section>
     </main>
-  );
+  )
 }
