@@ -25,7 +25,6 @@
   "devDependencies": {
     "@commitlint/cli": "^17.5.0",
     "@commitlint/config-conventional": "^17.4.4",
-    "@netlify/plugin-nextjs": "^4.29.5-appdir.0",
     "autoprefixer": "^10.4.14",
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
