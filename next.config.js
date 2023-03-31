@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
-    domains: ['user-images.githubusercontent.com', "images.unsplash.com"],
+    domains: ['user-images.githubusercontent.com', 'images.unsplash.com'],
   },
 }
 

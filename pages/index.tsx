@@ -1,6 +1,8 @@
+import Layout from '@/components/layout/Layout'
+import type { NextPage } from 'next'
 import Image from 'next/image'
 
-export default function Home() {
+const Home: NextPage = () => {
   function Card() {
     return (
       <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white">
@@ -55,7 +57,7 @@ export default function Home() {
     )
   }
   return (
-    <main>
+    <Layout>
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
           <div className="mx-auto max-w-xl text-center">
@@ -77,6 +79,8 @@ export default function Home() {
         <Card />
         <Card /> <Card /> <Card /> <Card /> <Card /> <Card />
       </section>
-    </main>
+    </Layout>
   )
 }
+
+export default Home
