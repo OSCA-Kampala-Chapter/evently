@@ -1,9 +1,10 @@
 import Layout from '@/components/layout/Layout'
 import type { NextPage } from 'next'
 import Image from 'next/image'
+import Events from '../content/events.json'
 
 const Home: NextPage = () => {
-  function Card() {
+  function Card(props: {Events: any}) {
     return (
       <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white">
         <Image
@@ -14,22 +15,18 @@ const Home: NextPage = () => {
           width={500}
         />
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">evently hackathon</div>
+          <div className="font-bold text-xl mb-2">{Events.name}</div>
           <p className="text-gray-700 text-base">
-            Lets hack events and tech parties...
+          {Events.description}
           </p>
         </div>
         <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #js
+        {Events.tags.map((tag: string, index: number) => (
+          <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+            {tag}
           </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #python
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #typescript
-          </span>
-        </div>
+        ))}
+      </div>
       </div>
     )
   }
