@@ -4,7 +4,14 @@ import Image from 'next/image'
 import events from '../content/events.json'
 
 const Home: NextPage = () => {
-  function Card(props: { events: any }) {
+  interface ICardProps {
+    partnersData: {
+      name: string
+      description: string
+      tags: string[]
+    }
+  }
+  function Card(props: ICardProps) {
     return (
       <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white">
         <Image
