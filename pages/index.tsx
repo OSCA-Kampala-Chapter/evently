@@ -1,10 +1,10 @@
 import Layout from '@/components/layout/Layout'
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import Events from '../content/events.json'
+import events from '../content/events.json'
 
 const Home: NextPage = () => {
-  function Card(props: {Events: any}) {
+  function Card(props: { events: any }) {
     return (
       <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white">
         <Image
@@ -15,18 +15,19 @@ const Home: NextPage = () => {
           width={500}
         />
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{Events.name}</div>
-          <p className="text-gray-700 text-base">
-          {Events.description}
-          </p>
+          <div className="font-bold text-xl mb-2">{events.name}</div>
+          <p className="text-gray-700 text-base">{events.description}</p>
         </div>
         <div className="px-6 pt-4 pb-2">
-        {Events.tags?.map((tag: string, index: number) => (
-          <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            {tag}
-          </span>
-        ))}
-      </div>
+          {events.tags?.map((tag: string, index: number) => (
+            <span
+              key={index}
+              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     )
   }
@@ -46,7 +47,7 @@ const Home: NextPage = () => {
               type="search"
               id="search-dropdown"
               className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-              placeholder="Search Hackathons, Tech Events..."
+              placeholder="Search Hackathons, Tech events..."
             />
           </div>
         </div>
