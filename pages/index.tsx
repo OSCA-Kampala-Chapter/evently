@@ -13,7 +13,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     setFlatEvents(eventsData)
-  }, [])
+  }, [eventsData])
 
   return (
     <Layout>
