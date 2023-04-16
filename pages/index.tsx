@@ -1,17 +1,30 @@
 import Layout from '@/components/layout/Layout'
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import events from '../content/events.json'
+import events from '@/events/2023.json'
+import { useEffect, useState } from 'react'
+import useFlatArray from '@/hooks/useFlatArray'
 
 const Home: NextPage = () => {
+  const [cardData, setCardData] = useState([])
+  const [flatEvents, setFlatEvents] = useState([])
+
+  useEffect(() => {
+    setFlatEvents(useFlatArray(events))
+  },[flatEvents])
+
+
   interface ICardProps {
-    partnersData: {
+    data: {
       name: string
       description: string
       tags: string[]
     }
   }
+
   function Card(props: ICardProps) {
+   const {name, description, tags} = props.data
+   console.log(name)
     return (
       <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white">
         <Image
@@ -22,18 +35,18 @@ const Home: NextPage = () => {
           width={500}
         />
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{events.name}</div>
-          <p className="text-gray-700 text-base">{events.description}</p>
+          <div className="font-bold text-xl mb-2">{name}</div>
+          <p className="text-gray-700 text-base">event</p>
         </div>
         <div className="px-6 pt-4 pb-2">
-          {events.tags?.map((tag: string, index: number) => (
+          {/* {events.tags?.map((tag: string, index: number) => (
             <span
               key={index}
               className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
             >
               {tag}
             </span>
-          ))}
+          ))} */}
         </div>
       </div>
     )
@@ -81,8 +94,10 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className="grid lg:grid-cols-3 md:grid-cols-2 gap-y-8 place-items-center gap-x-1 lg:mx-20 md:mx-8 mx:2 grid-cols-1">
-        <Card />
-        <Card /> <Card /> <Card /> <Card /> <Card /> <Card />
+        <Card data={flatEvents} />
+        <Card data={flatEvents}/> <Card data={flatEvents}/>{' '}
+        <Card data={flatEvents} /> <Card data={flatEvents} />{' '}
+        <Card data={flatEvents} /> <Card data={flatEvents} />
       </section>
     </Layout>
   )

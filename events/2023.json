@@ -1,0 +1,21 @@
+{
+  "january": [
+    {
+      "name": "Flutter",
+      "description": "Loren ipsum",
+      "tags": ["flutter"]
+    },
+    {
+      "name": "Blockchain",
+      "description": "lorem ipsum",
+      "tags": ["blockchain"]
+    }
+  ],
+  "september": [
+    {
+      "name": "PyCon Uganda",
+      "description": "Loren ipsum",
+      "tags": ["python"]
+    }
+  ]
+}
