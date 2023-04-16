@@ -1,5 +1,3 @@
-
-
 import { GitHubIcon } from '@/lib/icons'
 import { GITHUB_LINK, LOGO, LOGO_ALT } from '@/lib/utils'
 import Image from 'next/image'
