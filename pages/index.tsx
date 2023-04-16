@@ -9,9 +9,10 @@ import EventCard from '@/components/EventCard'
 
 const Home: NextPage = () => {
   const [flatEvents, setFlatEvents] = useState<IEventData[]>([])
+  const eventsData = useFlatArray(events)
 
   useEffect(() => {
-    setFlatEvents(useFlatArray(events))
+    setFlatEvents(eventsData)
   }, [])
 
   return (
