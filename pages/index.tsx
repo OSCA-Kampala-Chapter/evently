@@ -1,61 +1,20 @@
 import Layout from '@/components/layout/Layout'
 import type { NextPage } from 'next'
-import Image from 'next/image'
+import events from '@/events/2023.json'
+import { useEffect, useState } from 'react'
+import useFlatArray from '@/hooks/useFlatArray'
+import { IEventData } from '@/lib/types'
+import SearchBar from '@/components/Search'
+import EventCard from '@/components/EventCard'
 
 const Home: NextPage = () => {
-  function Card() {
-    return (
-      <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white">
-        <Image
-          className="w-full"
-          src="https://images.unsplash.com/photo-1638029202288-451a89e0d55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          alt="Sunset in the mountains"
-          height={500}
-          width={500}
-        />
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">evently hackathon</div>
-          <p className="text-gray-700 text-base">
-            Lets hack events and tech parties...
-          </p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #js
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #python
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #typescript
-          </span>
-        </div>
-      </div>
-    )
-  }
-  function SearchBar() {
-    return (
-      <form>
-        <div className="flex">
-          <label
-            htmlFor="search-dropdown"
-            className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-          >
-            Your Email
-          </label>
+  const [flatEvents, setFlatEvents] = useState<IEventData[]>([])
+  const eventsData = useFlatArray(events)
 
-          <div className="relative w-full">
-            <input
-              type="search"
-              id="search-dropdown"
-              className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-              placeholder="Search Hackathons, Tech Events..."
-            />
-          </div>
-        </div>
-      </form>
-    )
-  }
+  useEffect(() => {
+    setFlatEvents(eventsData)
+  }, [eventsData])
+
   return (
     <Layout>
       <section>
@@ -76,8 +35,9 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className="grid lg:grid-cols-3 md:grid-cols-2 gap-y-8 place-items-center gap-x-1 lg:mx-20 md:mx-8 mx:2 grid-cols-1">
-        <Card />
-        <Card /> <Card /> <Card /> <Card /> <Card /> <Card />
+        {flatEvents.map((event: IEventData, index: number) => (
+          <EventCard key={index} data={event} />
+        ))}
       </section>
     </Layout>
   )

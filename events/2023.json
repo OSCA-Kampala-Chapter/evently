@@ -1,0 +1,27 @@
+{
+  "january": [
+    {
+      "name": "Flutter",
+      "description": "Loren ipsum",
+      "poster": "https://images.unsplash.com/photo-1638029202288-451a89e0d55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "tags": ["flutter"],
+      "parentIndex": 0
+    },
+    {
+      "name": "Blockchain",
+      "description": "lorem ipsum",
+      "poster": "https://images.unsplash.com/photo-1638029202288-451a89e0d55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "tags": ["blockchain"],
+      "parentIndex": 0
+    }
+  ],
+  "september": [
+    {
+      "name": "PyCon Uganda",
+      "description": "Loren ipsum",
+      "poster": "https://images.unsplash.com/photo-1638029202288-451a89e0d55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "tags": ["python"],
+      "parentIndex": 1
+    }
+  ]
+}
